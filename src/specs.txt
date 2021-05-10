@@ -1,0 +1,36 @@
+Titlu proiect: ATM
+
+Descriere: Sa se dezvolte un program, folosind Java Core, care sa simuleze comportamentul unui ATM.
+
+Interactiunea cu ATM-ul se va face din consola. La rulare programul va afisa in consola un meniu
+cu 4 optiuni: 0. Interogare sold, 1. Retragere, 2. Depunere, 3.Exchange.
+
+Identificarea unui client se va face printr-un cod unic de 3 cifre, urmat de un cod pin de 4 cifre.
+
+Baza de clienti ai "bancii" va fi salvata, citita si updatata din fisier(se lasa la alegere designul si structura de fisiere),
+dar in momentul in care utilizatorul face o extragere sau o depunere, modificarea va fi persistata in fisier.
+
+In momentul depunerii sau extragerii, suma va fi in formata din valoarea numerica, urmata de moneda.(ex 100RON, 120$) Se accepta urmatoarele monede(RON, $, €).
+Depunerile, extragerile se vor putea face si in/din monede diferite de cea a contului, iar rata de conversie va fi citita dintr-un fisier.
+
+De la ATM, vor putea extrage bani si clienti care nu se afla in baza de clienti curenta, daca sunt de acord sa achite un comision de 0.1% din valoarea regragerii,
+iar actiunile lor vor trebui salvate intr-un fisier separat.
+
+Conturile vor avea un indicator de stare(activ, blocat). Schimbarea starii din activ in blocat se va face daca PIN-ul este introdus in oglinda.
+Schimbarea starii din blocat in activ se va face prin introducerea in consola a unei comenzi predefinite: ex:ADMIN_UNLOCK_xyz, urmat de o parola.
+
+Programul va dispune de un fisier unde se vor salva toate actiunile utilizatorilor. Iar acestea vor putea fi accesate cu ajutorul unei comenzi predefinite: ex: ADMIN_TRACE_xyz.
+
+In momentul in care aplicatia porneste, automatul va dispune de o suma predefinita de bani: 100 000RON, 10 000€, 10 000$. Suma aceasta putand fi modificata cu o comanda predefinita:
+ADMIN_ADD_MONEY_1000 / ADMIN_WITHDRAW_MONEY_1000.
+Daca suma respectiva scade sub valoarea de 10 000, 1000, 1000, utilizatorii vor putea extrage maxim 10% din suma ramasa dar nu mai putin de 30RON sau echivalentul in valuta.
+
+
+Bonus:
+1. Se va oferi un meniu pentru schimbare PIN.
+2. Se va accepta ca moneda si £, caz in care formatul inputului se va schimba din 100$ in £100. Semnul valutei precedand suma.
+
+Restrictii, cerinte extra:
+
+- se va folosi doar Java Core, fisiere de tip .txt. Fisierele pot contine datele in format CSV, JSON, XML.
+- codul va fi publicat pe GIT, accesul la repo va fi public, iar codul va fi revizuit de un coleg, ales intr-un mod total aleator.

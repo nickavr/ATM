@@ -1,0 +1,17 @@
+{
+    [
+        {
+            "name" : "Popescu Ion",
+            "CVV" : 123,
+            "PIN" : 1212
+            "deposit" : 30000
+        },
+
+         {
+            "name" : "John Doe",
+            "CVV" : 183,
+            "PIN" : 1292
+            "deposit" : 100000
+          },
+    ]
+}
