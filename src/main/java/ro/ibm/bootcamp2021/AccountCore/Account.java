@@ -1,9 +1,6 @@
 package ro.ibm.bootcamp2021.AccountCore;
 
-import ro.ibm.bootcamp2021.Exceptions.UnknownCVVCodeException;
-import ro.ibm.bootcamp2021.Exceptions.UnknownPINException;
-
-public class Account implements AccountActions{
+public class Account {
     String firstName;
     String lastName;
     Integer CVV;
@@ -18,13 +15,11 @@ public class Account implements AccountActions{
         this.deposit = deposit;
     }
 
-    @Override
-    public void checkCVVCode(Integer code) throws UnknownCVVCodeException {
-
+    public Integer getCVV() {
+        return CVV;
     }
 
-    @Override
-    public void checkPIN(Integer pin) throws UnknownPINException {
-
+    public Integer getPIN() {
+        return PIN;
     }
 }

@@ -1,4 +1,4 @@
-package ro.ibm.bootcamp2021.ATMcore;
+package ro.ibm.bootcamp2021.ATMCore;
 
 public enum CurrencyType {
     RON("RON"), EURO("€"), DOLLAR("$");
