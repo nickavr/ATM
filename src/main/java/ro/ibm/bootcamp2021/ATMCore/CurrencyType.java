@@ -5,11 +5,30 @@ public enum CurrencyType {
 
     private String currencySign;
 
-    CurrencyType(String currency) {
-        this.currencySign = currency;
+    CurrencyType(String currencySign) {
+        this.currencySign = currencySign;
     }
 
     public String getCurrencySign() {
         return currencySign;
+    }
+
+
+    public static CurrencyType getCurrencyWithCode(String currencyCode){
+        for(CurrencyType currency: CurrencyType.values()){
+            if(currency.toString().equals(currencyCode)){
+                return currency;
+            }
+        }
+        throw new UnsupportedOperationException();
+    }
+
+    public static CurrencyType getCurrencyWithSign(String currencySign){
+        for(CurrencyType currency: CurrencyType.values()){
+            if(currency.getCurrencySign().equals(currencySign)){
+                return currency;
+            }
+        }
+        throw new UnsupportedOperationException();
     }
 }

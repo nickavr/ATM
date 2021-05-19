@@ -4,13 +4,15 @@
         "lastName" : "Popescu",
         "CVV" : 123,
         "PIN" : 1212,
-        "deposit" : 30000
+        "deposit" : 30000,
+        "currency": "RON"
     },
     {
         "firstName" : "John",
         "lastName" : "Doe",
         "CVV" : 183,
         "PIN" : 1292,
-        "deposit" : 100000
+        "deposit" : 100000,
+        "currency": "RON"
     }
 ]
