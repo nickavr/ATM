@@ -1,0 +1,19 @@
+[
+    {
+        "conversionRate": 4.3,
+        "amountCurrency": "DOLLAR",
+        "accountCurrency": "RON"
+    },
+
+    {
+        "conversionRate": 1,
+        "amountCurrency": "RON",
+        "accountCurrency": "RON"
+    },
+
+    {
+        "conversionRate": 4.9,
+        "amountCurrency": "EURO",
+        "accountCurrency": "RON"
+    }
+]
