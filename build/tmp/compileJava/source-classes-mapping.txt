@@ -1,11 +1,11 @@
+ro/ibm/bootcamp2021/ATMCore/Operations/Common/EndSession.java
+ ro.ibm.bootcamp2021.ATMCore.Operations.Common.EndSession
 ro/ibm/bootcamp2021/AccountCore/AccountSecurityActions.java
  ro.ibm.bootcamp2021.AccountCore.AccountSecurityActions
 ro/ibm/bootcamp2021/ATMCore/ExchangeRates/ExchangeRate.java
  ro.ibm.bootcamp2021.ATMCore.ExchangeRates.ExchangeRate
 ro/ibm/bootcamp2021/ATMCore/Operations/AbstractRequestHandler.java
  ro.ibm.bootcamp2021.ATMCore.Operations.AbstractRequestHandler
-ro/ibm/bootcamp2021/ATMCore/ATMValues.java
- ro.ibm.bootcamp2021.ATMCore.ATMValues
 ro/ibm/bootcamp2021/ATMCore/Operations/Interogation/GetCurrentSold.java
  ro.ibm.bootcamp2021.ATMCore.Operations.Interogation.GetCurrentSold
 ro/ibm/bootcamp2021/APIs/ATMFlowAPI.java
@@ -13,22 +13,26 @@ ro/ibm/bootcamp2021/APIs/ATMFlowAPI.java
 ro/ibm/bootcamp2021/APIs/MenuAPI.java
  ro.ibm.bootcamp2021.APIs.MenuAPI
  ro.ibm.bootcamp2021.APIs.MenuAPI$1
+ro/ibm/bootcamp2021/ATMCore/Operations/Common/ConvertRequestCurrencyProcess.java
+ ro.ibm.bootcamp2021.ATMCore.Operations.Common.ConvertRequestCurrencyProcess
 ro/ibm/bootcamp2021/Exceptions/UnknownPINException.java
  ro.ibm.bootcamp2021.Exceptions.UnknownPINException
+ro/ibm/bootcamp2021/ATMCore/Operations/Common/AmountProcess.java
+ ro.ibm.bootcamp2021.ATMCore.Operations.Common.AmountProcess
 ro/ibm/bootcamp2021/APIs/DBOperationsAPI.java
  ro.ibm.bootcamp2021.APIs.DBOperationsAPI
  ro.ibm.bootcamp2021.APIs.DBOperationsAPI$1
  ro.ibm.bootcamp2021.APIs.DBOperationsAPI$2
 ro/ibm/bootcamp2021/APIs/AuthentificationAPI.java
  ro.ibm.bootcamp2021.APIs.AuthentificationAPI
-ro/ibm/bootcamp2021/ATMCore/Operations/AmountProcess.java
- ro.ibm.bootcamp2021.ATMCore.Operations.AmountProcess
-ro/ibm/bootcamp2021/ATMCore/Operations/ConvertRequestCurrencyProcess.java
- ro.ibm.bootcamp2021.ATMCore.Operations.ConvertRequestCurrencyProcess
+ro/ibm/bootcamp2021/ATMCore/ATMCore.java
+ ro.ibm.bootcamp2021.ATMCore.ATMCore
 ro/ibm/bootcamp2021/ATMCore/Operations/Deposit/DepositIntoAccount.java
  ro.ibm.bootcamp2021.ATMCore.Operations.Deposit.DepositIntoAccount
 ro/ibm/bootcamp2021/Application/Main.java
  ro.ibm.bootcamp2021.Application.Main
+ro/ibm/bootcamp2021/ATMCore/Operations/Common/CreateInputRequest.java
+ ro.ibm.bootcamp2021.ATMCore.Operations.Common.CreateInputRequest
 ro/ibm/bootcamp2021/Exceptions/UnknownCVVCodeException.java
  ro.ibm.bootcamp2021.Exceptions.UnknownCVVCodeException
 ro/ibm/bootcamp2021/Validators/AmountInputValidator.java
@@ -43,8 +47,6 @@ ro/ibm/bootcamp2021/ATMCore/InputRequest.java
  ro.ibm.bootcamp2021.ATMCore.InputRequest
 ro/ibm/bootcamp2021/Exceptions/NullAccountException.java
  ro.ibm.bootcamp2021.Exceptions.NullAccountException
-ro/ibm/bootcamp2021/ATMCore/Operations/CreateInputRequest.java
- ro.ibm.bootcamp2021.ATMCore.Operations.CreateInputRequest
 ro/ibm/bootcamp2021/ATMCore/MenuOptions.java
  ro.ibm.bootcamp2021.ATMCore.MenuOptions
 ro/ibm/bootcamp2021/Validators/MenuOptionValidator.java
@@ -53,7 +55,5 @@ ro/ibm/bootcamp2021/ATMCore/Operations/OperationChainProcessor.java
  ro.ibm.bootcamp2021.ATMCore.Operations.OperationChainProcessor
 ro/ibm/bootcamp2021/ATMCore/CurrencyType.java
  ro.ibm.bootcamp2021.ATMCore.CurrencyType
-ro/ibm/bootcamp2021/ATMCore/Operations/MenuDisplay.java
- ro.ibm.bootcamp2021.ATMCore.Operations.MenuDisplay
-ro/ibm/bootcamp2021/ATMCore/Operations/EndSession.java
- ro.ibm.bootcamp2021.ATMCore.Operations.EndSession
+ro/ibm/bootcamp2021/ATMCore/Operations/Common/MenuDisplay.java
+ ro.ibm.bootcamp2021.ATMCore.Operations.Common.MenuDisplay

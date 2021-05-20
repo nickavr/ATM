@@ -1,0 +1,1 @@
+{"ATMAvailableAmount":200000.0,"ATMAmountCurrency":"RON","unlockAccountCode":"ADMIN_UNLOCK_1234"}
