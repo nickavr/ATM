@@ -1,1 +1,1 @@
-{"ATMAvailableAmount":200000.0,"ATMAmountCurrency":"RON","unlockAccountCode":"ADMIN_UNLOCK_1234"}
+{"deposits":[{"ATMAvailableAmount":200516.0,"ATMAmountCurrency":"RON"},{"ATMAvailableAmount":200000.0,"ATMAmountCurrency":"EURO"},{"ATMAvailableAmount":200100.0,"ATMAmountCurrency":"DOLLAR"}],"unlockAccountCode":"ADMIN_UNLOCK_ACCOUNT_1234","addMoneyToATMCode":"ADMIN_ADD_MONEY_1234"}

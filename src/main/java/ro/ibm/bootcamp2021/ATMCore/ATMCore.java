@@ -1,39 +1,27 @@
 package ro.ibm.bootcamp2021.ATMCore;
 
 public class ATMCore {
-    private Double ATMAvailableAmount;
-    private CurrencyType ATMAmountCurrency;
+    private ATMDeposit[] deposits;
     private String unlockAccountCode;
+    private String addMoneyToATMCode;
 
-    public ATMCore(Double ATMAvailableAmount, String ATMAmountCurrency, String unlockAccountCode) {
-        this.ATMAvailableAmount = ATMAvailableAmount;
-        this.ATMAmountCurrency = CurrencyType.getCurrencyWithCode(ATMAmountCurrency);
+    public ATMCore(ATMDeposit[] deposits, String unlockAccountCode, String addMoneyToATMCode) {
+        this.deposits = deposits;
         this.unlockAccountCode = unlockAccountCode;
+        this.addMoneyToATMCode = addMoneyToATMCode;
     }
 
-    @Override
-    public String toString() {
-        return "ATMCore{" +
-                "ATMAvailableAmount=" + ATMAvailableAmount +
-                ", ATMAmountCurrency=" + ATMAmountCurrency +
-                ", unlockAccountCode='" + unlockAccountCode + '\'' +
-                '}';
+    public ATMDeposit[] getDeposits() {
+        return deposits;
     }
 
-    public Double getATMAvailableAmount() {
-        return ATMAvailableAmount;
-    }
-
-    public void setATMAvailableAmount(Double ATMAvailableAmount) {
-        this.ATMAvailableAmount = ATMAvailableAmount;
-    }
-
-    public CurrencyType getATMAmountCurrency() {
-        return ATMAmountCurrency;
-    }
-
-    public void setATMAmountCurrency(CurrencyType ATMAmountCurrency) {
-        this.ATMAmountCurrency = ATMAmountCurrency;
+    public ATMDeposit findDepositByCurrency(CurrencyType currencyType){
+        for(int i = 0; i < deposits.length; i++){
+            if(deposits[i].getATMAmountCurrency() == currencyType){
+                return deposits[i];
+            }
+        }
+        throw new UnsupportedOperationException();
     }
 
     public String getUnlockAccountCode() {
@@ -42,5 +30,13 @@ public class ATMCore {
 
     public void setUnlockAccountCode(String unlockAccountCode) {
         this.unlockAccountCode = unlockAccountCode;
+    }
+
+    public String getAddMoneyToATMCode() {
+        return addMoneyToATMCode;
+    }
+
+    public void setAddMoneyToATMCode(String addMoneyToATMCode) {
+        this.addMoneyToATMCode = addMoneyToATMCode;
     }
 }

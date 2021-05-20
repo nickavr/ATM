@@ -37,4 +37,12 @@ public class InputRequest {
     public CurrencyType getCurrencyType() {
         return currencyType;
     }
+
+    public MenuOptions getOption() {
+        return option;
+    }
+
+    public void setOption(MenuOptions option) {
+        this.option = option;
+    }
 }
