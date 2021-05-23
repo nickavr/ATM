@@ -15,7 +15,7 @@ public class AmountProcess extends AbstractRequestHandler {
         System.out.println("Enter amount: ");
         String inputAmountString = scanner.next();
         if(AmountInputValidator.amountInputValidator(inputAmountString)){
-            request = transformInputToRequest(inputAmountString);
+            transformInputToRequest(inputAmountString, request);
             System.out.println(request.toString());
             if(this.getNextProcess() != null){
                 this.getNextProcess().handleRequest(request, currentAccount);
@@ -26,10 +26,11 @@ public class AmountProcess extends AbstractRequestHandler {
         }
     }
 
-    private InputRequest transformInputToRequest(String input){
+    private void transformInputToRequest(String input, InputRequest request){
         Double inputAmount = Double.parseDouble(input.replaceAll("[^0-9]", ""));
         CurrencyType amountCurrency
                 = CurrencyType.getCurrencyWithSign(input.replaceAll("\\d", ""));
-        return new InputRequest(inputAmount, amountCurrency);
+        request.setAmount(inputAmount);
+        request.setCurrencyType(amountCurrency);
     }
 }

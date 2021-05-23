@@ -4,10 +4,14 @@ import ro.ibm.bootcamp2021.Exceptions.UnknownCVVCodeException;
 import ro.ibm.bootcamp2021.Exceptions.UnknownPINException;
 
 public interface AccountSecurityActions {
-   static void checkCVVCode(Integer code) throws UnknownCVVCodeException{
-      //TODO: validate code
+   static void checkCVVCode(String code) throws UnknownCVVCodeException{
+      if(!code.chars().allMatch( Character::isDigit )){
+         throw new UnknownCVVCodeException("Unknown CVV");
+      }
    }
-   static void checkPIN(Integer pin) throws UnknownPINException{
-      //TODO: validate pin
+   static void checkPIN(String pin) throws UnknownPINException{
+      if(!pin.chars().allMatch( Character::isDigit )){
+         throw new UnknownPINException("Unknown PIN");
+      }
    }
 }

@@ -21,17 +21,16 @@ public class MenuAPI {
         }
     }
 
-    public static MenuOptions receiveMenuChoice(){
-        Integer menuChoice = scanner.nextInt();
+    public static MenuOptions receiveMenuChoice() throws UnsupportedOperationException{
+        String menuChoice = scanner.next();
         if(!MenuOptionValidator.validateMenuOption(menuChoice)) {
-            System.out.println("Invalid option, try again: ");
-            receiveMenuChoice();
+            throw new UnsupportedOperationException("Invalid menu option");
         }
-            return MenuOptions.getOptionWithCode(menuChoice);
+            return MenuOptions.getOptionWithCode(Integer.parseInt(menuChoice));
 
     }
 
-    public static void processMenuChoice(MenuOptions option){
+    public static void processMenuChoice(MenuOptions option) throws UnsupportedOperationException{
         //Potential command refactoring
         InputRequest inputRequest = new InputRequest(option);
         AbstractRequestHandler requestHandler = null;
@@ -56,9 +55,9 @@ public class MenuAPI {
                 requestHandler = new EndSession();
                 break;
             default:
-                throw new UnsupportedOperationException();
+                throw new UnsupportedOperationException("Unknown menu option");
         }
-        requestHandler.handleRequest(inputRequest, AuthentificationAPI.getAccount());
+        requestHandler.handleRequest(inputRequest, AuthenticationAPI.getAccount());
 
     }
 

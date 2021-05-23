@@ -1,1 +1,1 @@
-[{"firstName":"Ion","lastName":"Popescu","CVV":123,"PIN":1212,"deposit":30430.0,"currency":"RON"},{"firstName":"John","lastName":"Doe","CVV":183,"PIN":1292,"deposit":100000.0,"currency":"RON"}]
+[{"firstName":"Ion","lastName":"Popescu","CVV":123,"PIN":1212,"deposit":29184.0,"currency":"RON","isActive":false},{"firstName":"John","lastName":"Doe","CVV":183,"PIN":1292,"deposit":100000.0,"currency":"RON","isActive":false}]

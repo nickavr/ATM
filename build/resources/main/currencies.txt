@@ -12,7 +12,7 @@
     },
 
     {
-        "conversionRate": 4.9,
+        "conversionRate": 4.85,
         "amountCurrency": "EURO",
         "accountCurrency": "RON"
     }

@@ -1,17 +1,16 @@
 package ro.ibm.bootcamp2021.ATMCore;
 
-public class InputRequest {
-    Double amount;
-    CurrencyType currencyType;
+public class InputRequest extends GeneralRequest{
+
     MenuOptions option;
 
     public InputRequest(MenuOptions option) {
+        super(0.0, null);
         this.option = option;
     }
 
     public InputRequest(Double amount, CurrencyType currencyType) {
-        this.amount = amount;
-        this.currencyType = currencyType;
+        super(amount, currencyType);
     }
 
     @Override
@@ -20,22 +19,6 @@ public class InputRequest {
                 "amount=" + amount +
                 ", currencyType=" + currencyType +
                 '}';
-    }
-
-    public void setAmount(Double amount) {
-        this.amount = amount;
-    }
-
-    public void setCurrencyType(CurrencyType currencyType) {
-        this.currencyType = currencyType;
-    }
-
-    public Double getAmount() {
-        return amount;
-    }
-
-    public CurrencyType getCurrencyType() {
-        return currencyType;
     }
 
     public MenuOptions getOption() {

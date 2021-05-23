@@ -9,14 +9,17 @@ public class Account {
     Integer PIN;
     Double deposit;
     CurrencyType currency;
+    boolean isActive;
 
-    public Account(String firstName, String lastName, Integer CVV, Integer PIN, Double deposit, String currency) {
+    public Account(String firstName, String lastName,
+                   Integer CVV, Integer PIN, Double deposit, String currency, boolean isActive) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.CVV = CVV;
         this.PIN = PIN;
         this.deposit = deposit;
         this.currency = CurrencyType.getCurrencyWithCode(currency);
+        this.isActive = isActive;
     }
 
     @Override

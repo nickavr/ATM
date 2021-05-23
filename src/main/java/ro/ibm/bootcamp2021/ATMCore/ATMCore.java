@@ -4,11 +4,24 @@ public class ATMCore {
     private ATMDeposit[] deposits;
     private String unlockAccountCode;
     private String addMoneyToATMCode;
+    private String withdrawMoneyFromATMCode;
+    private String traceATMActions;
 
-    public ATMCore(ATMDeposit[] deposits, String unlockAccountCode, String addMoneyToATMCode) {
+    public ATMCore(ATMDeposit[] deposits, String unlockAccountCode, String addMoneyToATMCode,
+                   String withdrawMoneyFromATMCode, String traceATMActions) {
         this.deposits = deposits;
         this.unlockAccountCode = unlockAccountCode;
         this.addMoneyToATMCode = addMoneyToATMCode;
+        this.withdrawMoneyFromATMCode = withdrawMoneyFromATMCode;
+        this.traceATMActions = traceATMActions;
+    }
+
+    public String getTraceATMActions() {
+        return traceATMActions;
+    }
+
+    public void setTraceATMActions(String traceATMActions) {
+        this.traceATMActions = traceATMActions;
     }
 
     public ATMDeposit[] getDeposits() {
@@ -22,6 +35,14 @@ public class ATMCore {
             }
         }
         throw new UnsupportedOperationException();
+    }
+
+    public String getWithdrawMoneyFromATMCode() {
+        return withdrawMoneyFromATMCode;
+    }
+
+    public void setWithdrawMoneyFromATMCode(String withdrawMoneyFromATMCode) {
+        this.withdrawMoneyFromATMCode = withdrawMoneyFromATMCode;
     }
 
     public String getUnlockAccountCode() {
